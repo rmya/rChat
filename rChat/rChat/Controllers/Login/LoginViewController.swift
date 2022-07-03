@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
     private let loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("Log In", for: .normal)
-        button.backgroundColor = .link
+        button.backgroundColor = .systemMint
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 12
         button.layer.masksToBounds = true
@@ -117,7 +117,6 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func loginButtonTapped(){
-        
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
         
@@ -126,13 +125,17 @@ class LoginViewController: UIViewController {
                   alertUserLoginError()
                   return
               }
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { authResult, error in
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] authResult, error in
+            guard let strongSelf = self else{
+                return
+            }
             guard let result = authResult, error == nil else {
                 print("Failed to log in user with email: \(email)")
                 return
             }
             let user = result.user
             print("Logged In User: \(user)")
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         })
     }
     

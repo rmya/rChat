@@ -25,6 +25,7 @@
 		3D3D8B9228705DC200A17C9F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8B9128705DC200A17C9F /* ProfileViewController.swift */; };
 		3DC81D272870729600A845A0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC81D262870729600A845A0 /* Extensions.swift */; };
 		3DF259222871A09200995C32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DF259212871A09200995C32 /* GoogleService-Info.plist */; };
+		3DF259242871CEF300995C32 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF259232871CEF300995C32 /* DatabaseManager.swift */; };
 		7D16C868F5E16D96347D7793 /* Pods_rChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6647568EBC2C37A68B4107 /* Pods_rChat.framework */; };
 		850BA28584987CFFDDA2103F /* Pods_rChat_rChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8103D70B5894EC40F87EAA /* Pods_rChat_rChatUITests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		3D3D8B9128705DC200A17C9F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3DC81D262870729600A845A0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3DF259212871A09200995C32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3DF259232871CEF300995C32 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		4DFED426244B39E0E69C038D /* Pods_rChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DB70E85E2AC685ED1F283C /* Pods-rChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rChat.release.xcconfig"; path = "Target Support Files/Pods-rChat/Pods-rChat.release.xcconfig"; sourceTree = "<group>"; };
 		68DA9DE034111BDD4EB2E911 /* Pods-rChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rChatTests.debug.xcconfig"; path = "Target Support Files/Pods-rChatTests/Pods-rChatTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				3D3D8B512870581F00A17C9F /* AppDelegate.swift */,
 				3D3D8B532870581F00A17C9F /* SceneDelegate.swift */,
 				3DC81D262870729600A845A0 /* Extensions.swift */,
+				3DF259232871CEF300995C32 /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D3D8B8828705D0500A17C9F /* LoginViewController.swift in Sources */,
+				3DF259242871CEF300995C32 /* DatabaseManager.swift in Sources */,
 				3D3D8B8A28705D4600A17C9F /* RegisterViewController.swift in Sources */,
 				3D3D8B9028705DA100A17C9F /* NewConversationViewController.swift in Sources */,
 				3D3D8B562870581F00A17C9F /* ConversationsViewController.swift in Sources */,

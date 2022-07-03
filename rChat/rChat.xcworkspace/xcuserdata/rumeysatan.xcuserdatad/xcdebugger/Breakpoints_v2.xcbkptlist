@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "408147BE-8821-4083-A819-3AB6FEE58747"
-   type = "1"
+   uuid = "83EFCB20-6DD7-45E0-B009-0A31187AFC6B"
+   type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "85AF11AB-1EB3-4967-AEDC-5161B9153CA1"
-            shouldBeEnabled = "No"
+            uuid = "C418BE1A-3623-431B-9416-1E5F85D6E2E0"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "rChat/Controllers/Login/RegisterViewController.swift"
+            filePath = "rChat/Controllers/Login/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "loginButtonTapped()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3052DE7A-1FC5-4626-89B8-289DED11ACEE"
+            uuid = "94BED104-4100-4BFE-A658-765DF753515C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "rChat/Controllers/Login/RegisterViewController.swift"
+            filePath = "rChat/Controllers/ConversationsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "validateAuth()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
