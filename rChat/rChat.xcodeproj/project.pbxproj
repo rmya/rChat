@@ -51,6 +51,7 @@
 		045CC85095601D22A6D8EE43 /* Pods-rChat-rChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rChat-rChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-rChat-rChatUITests/Pods-rChat-rChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		26294CF5E5A641E19BE1E910 /* Pods-rChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rChatTests.release.xcconfig"; path = "Target Support Files/Pods-rChatTests/Pods-rChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		319BF6E59A0C738EF2EFFC77 /* Pods-rChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rChat.debug.xcconfig"; path = "Target Support Files/Pods-rChat/Pods-rChat.debug.xcconfig"; sourceTree = "<group>"; };
+		3D372D9C287388BE00558F66 /* rChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rChat.entitlements; sourceTree = "<group>"; };
 		3D3D8B4E2870581F00A17C9F /* rChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3D8B512870581F00A17C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D3D8B532870581F00A17C9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		3D3D8B502870581F00A17C9F /* rChat */ = {
 			isa = PBXGroup;
 			children = (
+				3D372D9C287388BE00558F66 /* rChat.entitlements */,
 				3D3D8B85287059CD00A17C9F /* Resources */,
 				3D3D8B84287059C500A17C9F /* ViewModels */,
 				3D3D8B83287059BD00A17C9F /* Models */,
@@ -678,6 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = rChat/rChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RT5UP3L47X;
@@ -708,6 +711,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = rChat/rChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RT5UP3L47X;
