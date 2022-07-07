@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
     
@@ -65,6 +66,12 @@ class LoginViewController: UIViewController {
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
         return button
     }()
+     
+    private let facebookloginButton: FBLoginButton = {
+        let button = FBLoginButton()
+        button.permissions = ["public_profile", "email"]
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,13 +90,15 @@ class LoginViewController: UIViewController {
         
         emailField.delegate = self
         passwordField.delegate = self
-
+        facebookloginButton.delegate = self
+        
         //Add subviews
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
         scrollView.addSubview(emailField)
         scrollView.addSubview(passwordField)
         scrollView.addSubview(loginButton)
+        scrollView.addSubview(facebookloginButton)
     }
     
     override func viewDidLayoutSubviews() {
@@ -112,6 +121,10 @@ class LoginViewController: UIViewController {
                                      height: 52)
         loginButton.frame = CGRect(x: 30,
                                    y: passwordField.bottom + 10,
+                                   width: scrollView.width - 60,
+                                   height: 52)
+        facebookloginButton.frame = CGRect(x: 30,
+                                   y: loginButton.bottom + 20,
                                    width: scrollView.width - 60,
                                    height: 52)
     }
@@ -174,4 +187,37 @@ extension LoginViewController: UITextFieldDelegate {
         return true
     }
  
+}
+
+extension LoginViewController: LoginButtonDelegate {
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        //no operation for now
+    }
+    
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        guard let token = result?.token?.tokenString else {
+            print("User failed to login in with facebook")
+            print(error?.localizedDescription)
+            return
+        }
+        
+        let credential = FacebookAuthProvider.credential(withAccessToken: token)
+        FirebaseAuth.Auth.auth().signIn(with: credential, completion: { [weak self] authResult, error in
+            guard let strongSelf = self else {
+                return
+            }
+            guard authResult != nil, error == nil else{
+                if let error = error {
+                    print("Facebook credential login failed, MFA may be needed - \(error)")
+                    print(error.localizedDescription)
+                }
+                return
+            }
+            
+            print("Succesfully logged user in")
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+        })
+        
+    }
+    
 }
